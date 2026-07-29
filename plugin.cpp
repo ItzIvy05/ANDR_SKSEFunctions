@@ -47,7 +47,7 @@ void SetupLog() {
 
 // Papyrus: String Function GetAndrealphusExtenderVersion() Global Native
 // Returns the version number of the mod.
-RE::BSFixedString GetAndrealphusExtenderVersion(RE::StaticFunctionTag*) { return "1.7.1"; }
+RE::BSFixedString GetAndrealphusExtenderVersion(RE::StaticFunctionTag*) { return "1.7.2"; }
 
 ///// Added by Ivy /////
 
@@ -822,6 +822,18 @@ int MakeDiceRoll(RE::StaticFunctionTag*, int iNumberOfDice, int iNumberOfSides, 
 
     return total + iModifier;
 }
+
+/*
+void SetActorLevel(RE::StaticFunctionTag*, RE::TESNPC* RelevantActor, int RelevantLevel) { 
+    if (RelevantActor == nullptr || RelevantLevel < 0) {
+        return;
+    } 
+    
+    RelevantActor->actorData.actorBaseFlags.reset(RE::ACTOR_BASE_DATA::Flag::kPCLevelMult);
+    RelevantActor->actorData.level = RelevantLevel;
+    RelevantActor->ResetStats()
+}
+*/
 
 bool PapyrusFunctions(RE::BSScript::IVirtualMachine* vm) {
     vm->RegisterFunction("GetAndrealphusExtenderVersion", "ANDR_PapyrusFunctions", GetAndrealphusExtenderVersion);
