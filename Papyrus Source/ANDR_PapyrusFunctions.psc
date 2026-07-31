@@ -149,7 +149,7 @@ Book Function GetOpenedBook() global native
 {Returns the currently opened book in the book menu. If not in book menu, returns None.}
 
 TopicInfo Function GetCurrentDialogueTopic() global native
-{Returns the TopicInfo that is currently being said by an NPC. If no NPC is speaking, returns None.}
+{Returns the TopicInfo that is currently being said by an NPC while in the dialogue menu. If not in the dialogue menu, returns None.}
 
 ;/
 Event OnBookFullyRead()
