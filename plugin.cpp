@@ -341,9 +341,9 @@ RE::TESObjectBOOK* GetOpenedBook(RE::StaticFunctionTag*) {
     return nullptr;
 }
 
-// Papyrus: TopicInfo Function GetCurrentDialogueTopic() Global Native
+// Papyrus: TopicInfo Function GetCurrentTopicInfo() Global Native
 // Returns the TopicInfo the NPC is currently speaking. Otherwise, returns None.
-RE::TESTopicInfo* GetCurrentDialogueTopic(RE::StaticFunctionTag*) {
+RE::TESTopicInfo* GetCurrentTopicInfo(RE::StaticFunctionTag*) {
     auto topicManager = RE::MenuTopicManager::GetSingleton();
 
     if (!topicManager) {
@@ -956,7 +956,7 @@ bool PapyrusFunctions(RE::BSScript::IVirtualMachine* vm) {
     vm->RegisterFunction("GetCurrentBookPage", "ANDR_PapyrusFunctions", GetCurrentBookPage);
     vm->RegisterFunction("GetBookText", "ANDR_PapyrusFunctions", GetBookText);
     vm->RegisterFunction("GetOpenedBook", "ANDR_PapyrusFunctions", GetOpenedBook);
-    vm->RegisterFunction("GetCurrentDialogueTopic", "ANDR_PapyrusFunctions", GetCurrentDialogueTopic);
+    vm->RegisterFunction("GetCurrentTopicInfo", "ANDR_PapyrusFunctions", GetCurrentTopicInfo);
 
 
     /*  depreciated functions

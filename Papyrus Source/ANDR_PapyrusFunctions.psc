@@ -148,7 +148,7 @@ Returns the body text of a book as a string
 Book Function GetOpenedBook() global native
 {Returns the currently opened book in the book menu. If not in book menu, returns None.}
 
-TopicInfo Function GetCurrentDialogueTopic() global native
+TopicInfo Function GetCurrentTopicInfo() global native
 {Returns the TopicInfo that is currently being said by an NPC while in the dialogue menu. If not in the dialogue menu, returns None.}
 
 ;/
